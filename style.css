@@ -47,14 +47,12 @@
     }
 }
 
-
 h3 {
     color: #FFFFFF; 
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 1em;
 }
-
 
 .stButton > button {
     background-color: #8A2BE2;
@@ -71,7 +69,6 @@ h3 {
     background-color: #32CD32; 
     transform: scale(1.05); 
 }
-
 
 .translation-completed {
     display: flex;
@@ -107,7 +104,6 @@ h3 {
     flex: 1;
 }
 
-
 .translated-text {
     background-color: rgba(230, 230, 250, 0.8); 
     padding: 15px;
@@ -116,14 +112,22 @@ h3 {
     margin-top: 20px;
     font-size: 20px;
     animation: fadeIn 2s ease;
+    
+    /* Added properties for text wrapping */
+    white-space: pre-wrap;        
+    word-wrap: break-word;        
+    overflow-wrap: break-word;    
+    max-width: 100%;              
+    box-sizing: border-box;       
+    /* Optional scroll for very long texts */
+    /* max-height: 300px;        
+    overflow-y: auto; */         
 }
-
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 
 .footer {
     position: fixed;
@@ -137,7 +141,6 @@ h3 {
     font-size: 14px;
 }
 
-
 footer {
     visibility: hidden;
 }
@@ -147,11 +150,9 @@ div[data-testid="stForm"] label {
     color: #000000;
 }
 
-
 div[data-testid="stLottie"] {
     background-color: transparent !important;
 }
-
 
 .custom-loader {
     position: relative;
@@ -193,7 +194,6 @@ div[data-testid="stLottie"] {
     0% { transform: rotate(360deg); }
     100% { transform: rotate(0deg); }
 }
-
 
 .logo-container {
     display: flex;
