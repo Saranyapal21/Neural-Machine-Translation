@@ -1,0 +1,209 @@
+.stApp {
+    background: linear-gradient(45deg, #4B0082, #00CED1, #FF00FF, #32CD32, #E6E6FA);
+    background-size: 300% 300%;
+    animation: BackgroundGradient 30s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+    0% {background-position: 0% 50%;}
+    20% {background-position: 50% 50%;}
+    40% {background-position: 100% 50%;}
+    60% {background-position: 50% 50%;}
+    80% {background-position: 0% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.typing-title {
+    color: #ffffff; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    margin-top: 0.5em;
+    overflow: hidden; 
+    border-right: 0.15em solid white; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 0.15em; 
+    display: inline-block; 
+    animation: typing 3.2s steps(25, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; 
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+
+h3 {
+    color: #FFFFFF; 
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+
+.stButton > button {
+    background-color: #8A2BE2;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stButton > button:hover {
+    background-color: #32CD32; 
+    transform: scale(1.05); 
+}
+
+
+.translation-completed {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.checkmark {
+    background-color: #32CD32 !important;
+    border-radius: 50% !important;
+    width: 2em !important;
+    height: 2em !important;
+    line-height: 2em !important;
+    font-size: 1.5em;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    margin-right: 0.5em;
+}
+
+.translation-completed .output-label {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 0.5em;
+    font-size: 1.2em;
+}
+
+.translation-completed .output-bar {
+    background-color: #00CED1; 
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    flex: 1;
+}
+
+
+.translated-text {
+    background-color: rgba(230, 230, 250, 0.8); 
+    padding: 15px;
+    border-radius: 8px;
+    color: #4B0082;
+    margin-top: 20px;
+    font-size: 20px;
+    animation: fadeIn 2s ease;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+
+footer {
+    visibility: hidden;
+}
+
+div[data-testid="stForm"] label {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+div[data-testid="stLottie"] {
+    background-color: transparent !important;
+}
+
+
+.custom-loader {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 20px auto; 
+}
+
+.custom-loader::before,
+.custom-loader::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin: -35px;
+    border: 6px solid #654321; 
+    border-top: 6px solid #000000;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+.custom-loader::after {
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    border: 6px solid #000000; 
+    border-top: 6px solid #654321; 
+    animation: spin-reverse 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    width: 100px; 
+    height: auto;
+    margin-right: 10px;
+}
