@@ -54,7 +54,7 @@ h3 {
     margin-bottom: 1em;
 }
 
-.stButton > button {
+button[data-testid="stFormSubmitButton"] {
     background-color: #8A2BE2;
     color: #FFFFFF;
     font-size: 1.2em;
@@ -65,18 +65,20 @@ h3 {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.stButton > button:hover {
+button[data-testid="stFormSubmitButton"]:hover {
     background-color: #32CD32; 
     transform: scale(1.05); 
 }
 
 .translation-completed {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
     margin-top: 1em;
+    flex-wrap: wrap;         /* Allow items to wrap if necessary */
+    max-width: 100%;
 }
 
-.checkmark {
+.translation-completed .checkmark {
     background-color: #32CD32 !important;
     border-radius: 50% !important;
     width: 2em !important;
@@ -86,13 +88,22 @@ h3 {
     display: inline-block;
     text-align: center;
     color: white;
-    margin-right: 0.5em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    flex-shrink: 0; /* Prevent the checkmark from shrinking */
+}
+
+.translation-completed .output-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
 }
 
 .translation-completed .output-label {
     color: #FFFFFF;
     font-weight: bold;
-    margin-right: 0.5em;
+    margin-bottom: 0.5em;
     font-size: 1.2em;
 }
 
@@ -101,7 +112,11 @@ h3 {
     color: white;
     padding: 0.5em 1em;
     border-radius: 5px;
-    flex: 1;
+    white-space: normal;          /* Allow normal text wrapping */
+    word-wrap: break-word;        /* Break long words */
+    overflow-wrap: break-word;    /* Ensure text wraps within container */
+    width: 100%;                  /* Ensure the box takes full available width */
+    box-sizing: border-box;
 }
 
 .translated-text {
@@ -112,16 +127,11 @@ h3 {
     margin-top: 20px;
     font-size: 20px;
     animation: fadeIn 2s ease;
-    
-    /* Added properties for text wrapping */
-    white-space: pre-wrap;        
+    white-space: normal;          /* Allow normal text wrapping */
     word-wrap: break-word;        
     overflow-wrap: break-word;    
     max-width: 100%;              
     box-sizing: border-box;       
-    /* Optional scroll for very long texts */
-    /* max-height: 300px;        
-    overflow-y: auto; */         
 }
 
 @keyframes fadeIn {
