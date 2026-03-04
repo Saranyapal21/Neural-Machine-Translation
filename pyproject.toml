@@ -1,0 +1,29 @@
+[project]
+name = "neural-machine-translation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "indic-nlp-library>=0.92",
+    "numpy>=2.4.2",
+    "pandas>=3.0.1",
+    "scikit-learn>=1.8.0",
+    "spacy>=3.8.11",
+    "en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+    "tabulate>=0.9.0",
+    "torch>=2.10.0",
+    "nltk>=3.9.3",
+    "rouge>=1.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.15.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.8"]
+build-backend = "uv_build"
