@@ -17,9 +17,9 @@ import string
 from string import digits
 import spacy
 
+import math
 import time
 import pandas as pd
-from tqdm import tqdm
 
 # torch libs
 import torch
@@ -32,10 +32,8 @@ from tqdm import tqdm
 from torch.nn.parallel import DataParallel
 
 from torch import Tensor
-import torch
-import torch.nn as nn
 from torch.nn import Transformer
-import math
+
 
 from timeit import default_timer as timer
 

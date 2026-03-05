@@ -28,6 +28,7 @@ Thumbs.db
 
 # Byte-compiled files
 *.so
+data/
 
 # Build artifacts
 build/
